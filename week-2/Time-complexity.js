@@ -1,4 +1,4 @@
-//要求三：演算法，時間複雜度是O(n2)
+//要求三：演算法，maxProduct的時間複雜度是O(n2)
 function maxProduct(nums) {
   let max = -Infinity;
   const length = nums.length;
@@ -15,7 +15,7 @@ maxProduct([-1, 2]);
 maxProduct([-1, 0, 2]);
 maxProduct([-1, -2, 0]);
 
-//要求五 ( Optional )：演算法，時間複雜度是O(n)
+//要求五 ( Optional )：演算法， maxZeros的時間複雜度是O(n)
 function maxZeros(nums) {
   let maxcount = 0;
   let count = 0;
