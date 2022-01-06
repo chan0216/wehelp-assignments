@@ -33,7 +33,7 @@ avg({
 "salary":50000
 }
 ]
-}) 
+})
 
 #要求三：演算法
 def maxProduct(nums):
@@ -68,7 +68,7 @@ def maxZeros(nums):
         maxcount = 0
         for i in range(0, len(nums)) :
             if (nums[i] == 0): 
-                count += 1 # 计数+1
+                count += 1
             else:
                 maxcount=max(maxcount,count)
                 count=0
