@@ -53,7 +53,6 @@ maxProduct([10, -20, 0, 3]);
 maxProduct([-1, 2]);
 maxProduct([-1, 0, 2]);
 maxProduct([-1, -2, 0]);
-//
 
 //要求四 ：演算法
 function twoSum(nums, target) {
@@ -69,7 +68,7 @@ function twoSum(nums, target) {
 let result = twoSum([2, 11, 7, 15], 9);
 console.log(result);
 
-//要求五 ( Optional )：演算法
+//要求五 ( Optional )：演算法，時間複雜度是O(n)
 function maxZeros(nums) {
   let maxcount = 0;
   let count = 0;
@@ -89,6 +88,3 @@ maxZeros([0, 1, 0, 0]);
 maxZeros([1, 0, 0, 0, 0, 1, 0, 1, 0, 0]);
 maxZeros([1, 1, 1, 1, 1]);
 maxZeros([0, 0, 0, 1, 1]);
-
-
- 
