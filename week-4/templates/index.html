@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}登入頁面{% endblock %}</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      h1 {
+        color: white;
+        background-color: black;
+        text-align: center;
+        padding: 10px;
+      }
+      h2 {
+        margin-top: 20px;
+      }
+      body {
+        text-align: center;
+      }
+      input {
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>{% block content %}歡迎光臨，請輸入帳號密碼{% endblock %}</h1>
+    <main>
+      {% block main %}
+      <h2>登入系統</h2>
+      <br />
+      <form method="POST" action="/signin">
+        <label for="username">帳號</label>
+        <input name="username" type="text" id="username"/>
+        <br />
+        <label for="password">密碼</label>
+        <input name="password" type="password" id="password"/>
+        <br />
+        <input type="submit" value="登入" />
+      </form>
+      {% endblock %}
+    </main>
+  </body>
+</html>
