@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/main.css" />
+    <title>{% block title %}登入頁面{% endblock %}</title>
+  </head>
+  <body>
+    <h1>{% block content %}歡迎光臨，請輸入帳號密碼{% endblock %}</h1>
+    <main>
+      {% block main %}
+      <h2>註冊帳號</h2>
+      <br />
+      <form method="POST" action="/signup">
+        <label>姓名</label>
+        <input name="name" type="text" />
+        <br />
+        <label>帳號</label>
+        <input name="username" type="text" />
+        <br />
+        <label>密碼</label>
+        <input name="password" type="password" />
+        <br />
+        <input type="submit" value="註冊" />
+      </form>
+      <hr />
+      <h2>登入系統</h2>
+      <br />
+      <form method="POST" action="/signin">
+        <label>帳號</label>
+        <input name="username" type="text" />
+        <br />
+        <label>密碼</label>
+        <input name="password" type="password" />
+        <br />
+        <input type="submit" value="登入" />
+      </form>
+      {% endblock %}
+    </main>
+  </body>
+</html>

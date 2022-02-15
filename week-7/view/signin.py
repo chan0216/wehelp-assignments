@@ -1,7 +1,7 @@
 from flask import request , redirect, url_for,session,Blueprint
 import public 
 signin_blueprint = Blueprint('signin', __name__)
-mydb=public.db1
+mydb=public.db
 @signin_blueprint.route("/signin",methods=["POST","GET"])
 def signin():
     if request.method == "POST":
@@ -12,5 +12,6 @@ def signin():
         member_value= mycursor.fetchone()
         if member_value is not None:
             session["name"]=member_value["name"]
+            session["username"]=member_value["username"]
             return redirect(url_for("member.member"))
         return redirect(url_for("error.error",message="帳號或密碼輸入錯誤"))

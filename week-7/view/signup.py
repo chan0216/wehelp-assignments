@@ -2,7 +2,7 @@ from flask import request , redirect, url_for,Blueprint
 
 import public 
 signup_blueprint = Blueprint('signup', __name__)
-mydb=public.db1
+mydb=public.db
 @signup_blueprint.route("/signup",methods=["POST","GET"])
 def signup():
     
